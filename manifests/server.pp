@@ -33,6 +33,6 @@ class jmeter::server($server_ip = '0.0.0.0') {
     ensure    => running,
     enable    => true,
     require   => File['/etc/init.d/jmeter'],
-    subscribe => [File['/etc/init.d/jmeter'], Exec['install-jmeter-plugins']],
+    # subscribe => [File['/etc/init.d/jmeter'], Exec['install-jmeter-plugins']],
   }
 }
